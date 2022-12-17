@@ -1,13 +1,279 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #6B728E;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+input {
+    outline: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+button {
+    cursor: pointer;
+}
+
+nav {
+    background-color: #404258;
+    color: #fff;
+}
+
+.navbar-content{
+    width: 100vw;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* INput*/ 
+
+.input {
+    margin-top: 2rem;
+    width: 100vw;
+}
+
+.input-content{
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.input input {
+    padding: .5rem;
+    width: 200px;
+}
+
+.input button {
+    width: 40px;
+}
+
+/*Show Users*/ 
+.show-users {
+    width: 100vw;
+    margin-top: 4rem;
+}
+
+.show-users-content {
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.box {
+    
+    padding: .5rem;
+    width: 300px;
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: repeat(3,1fr);
+    border: 1px solid black;
+    border-top: none;
+    border-left: none;
+    margin-bottom: 2rem;
+    margin-right: .5rem;
+    box-shadow: 3px 3px 3px 3px;
+}
+.box a {
+    color:#282A3A;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    grid-column: span 1;
+    justify-self: center;
+}
+.link {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2rem;
+    justify-content: center;
+    justify-self: center;
+}
+
+/*Profile*/
+
+.user-profile {
+    width: 100vw;
+    margin-top: 2rem;
+    
+}
+.user-profile img {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+.user-profile-content {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+p {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.profil-info {
+    grid-column: span 2;
+    padding: 1rem;
+}
+.profil-info * {
+    margin-bottom: 1rem;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.user {
+    padding: .3rem 1rem;
+    background-color: rgb(27, 197, 18);
+    border-radius: 10px;
+}
+.hire {
+    padding: .3rem 1rem;
+    background-color: gray;
+    border-radius: 10px;
+}
+.profile-header * {
+    margin-right: 1rem ;
+}
+.profil-info a {
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+.a {
+    margin: 3rem 0  ;
+}
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+}
+.social {
+    border: 1px solid black;
+    min-width: 200px;   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    margin-right: 2rem;
+    margin-top: 3rem;
+    border-left: none;
+    border-top: none;
+    box-shadow: 1px 1px;
+}
+
+/*Stats*/
+.stats {
+    width: 100vw;
+}
+
+.stats-content {
+    width: 90%;
+    padding: 1rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: .5rem;
+}
+
+.stat  {
+    display: flex;
+    height: 80px;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5rem;
+    box-shadow: 3px 3px 3px 3px;
+}
+.stat i{
+    color: rgb(74, 6, 6);
+}
+.span {
+    color: aquamarine;
+}
+
+/*Repos*/
+.latest-repos {
+    width: 100vw;
+    margin-top: 2rem;
+}
+.latest-repos-content {
+    width: 90%;
+    padding: 1rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.repo {
+    padding: 1rem;
+    margin: .5rem 0;
+    box-shadow: 2px 2px 2px 2px;
+    background-color: #282A3A;
+}
+.repo p {
+    font-size: 1.2rem;
+}
+.repo-header {
+    display: flex;
+    align-items: center;
+}
+.repo-header i {
+    color: bisque;
+}
+.repo-header * {
+    margin: 0.2rem 1rem 0.5rem 0;
+}
+
+.infos {
+    display: flex;
+}
+.infos .span-group {
+    padding: .5rem;
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.language {
+    border-radius: 10px;
+    color: yellow;
+}
+.watchers {
+    border-radius: 10px;
+    color: greenyellow;
+}
+.forks {
+    border-radius: 10px;
+    color: rgb(230, 155, 52);
+}
+
+@media (max-width: 1050px){
+    .user-profile-content img {
+        display: none;
+    }
+    .profil-info {
+        grid-column: span 3;
+    }
 }
