@@ -13,7 +13,7 @@ function User() {
             <div className="profile-header">
               <h2>{single.name}</h2>
               <span className="user">{single.type}</span>
-              <span className="hire">{single.hireable === null ? "Unhireable" : "Working"}</span>
+              <span className="hire">{single.hireable === null ? "Working" : "Working"}</span>
             </div>
             <p>{single.bio}</p>
             <div className="a">
